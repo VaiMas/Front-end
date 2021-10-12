@@ -1,0 +1,343 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Offside', cursive;
+    
+ }
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(83, 70, 31, 0.7),rgba(83, 70, 31, 0.7)), url(../images/image1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav img{
+    width: 125px;
+}
+#menu{
+    width: 35px;
+    height: 30px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+}
+.bar{
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+#bar1{
+    transform: translateY(-4px);
+}
+#bar3{
+    transform: translateY(4px);
+}
+.nav-ul li a{
+    color: white;
+    text-decoration: none;
+}
+.nav-ul li a:hover{
+    font-weight: bold;
+} 
+.nav-ul li{
+    list-style: none;
+    padding: 16px 0;
+}
+.nav-ul{
+    padding: 0;
+    margin: 0 20px;
+    transition: .3s ease;
+    display: none;
+}
+.menu-bg, .nav-links{
+    top:10px;
+    right: 20px;
+    position: absolute;
+}
+.menu-bg{
+    z-index: 1;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle,rgba(83, 70, 31, 0.7),rgba(83, 70, 31, 0.7));
+    border-radius: 50%;
+    transition: .3s ease;
+}
+.change-bg{
+    width: 550px;
+    height: 540px;
+    transform: translate(60%,-30%);
+}
+.nav-links{
+    z-index: 2;
+}
+.change #bar1{
+    transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+    transform: translateY(-6px) rotateZ(45deg);
+}
+.change #bar2{
+    opacity: 0;
+}
+.change{
+    display: block;
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 30px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 13px;
+    color: white;
+}
+
+.news{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px ;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    font-size:14px ;
+    color: #777;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.game-col{
+    min-width: 12em;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin: 1%;
+    padding: 20px 12px;
+    box-sizing: content-box; 
+    transition: .5s;
+    cursor: pointer;
+}
+.game-col img{
+    width: 100%;
+    background-size: cover;
+    border-radius: 5%;
+}    
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.game-col:hover{
+    box-shadow:  0 0 20px 0px rgba(0,0,0,0.2);
+}
+.best{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5em;
+    text-align: center;
+    padding-top: 50px;
+
+}
+.best-col{
+    min-width: 15em;
+    margin: 1%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5%;
+}
+.best-col img{
+    width: 100%;
+}
+.name{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: .3s;
+}
+.name:hover{
+    background: rgba(61, 52, 24, 0.7);
+
+}
+.name h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+}
+.name:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(#fff3f3,#61512f);
+    border-top: rgb(105, 90, 19, 0.5) solid 1px ;
+}
+.footer h4{
+    margin-bottom:25px ;
+    margin-top: 20px;
+    font-weight:600;
+}
+.icons i{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+footer p{
+    color: rgb(88, 77, 77);
+}
+
+@media screen and (min-width: 768px){
+    .menu-bg{
+        all: revert;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1% 4%;
+        
+    }
+    #menu{
+        opacity: 0;
+    }
+    .nav-links ul{
+        display: flex;
+        text-align: right;
+        margin-right: 20px;
+    }
+    .nav-ul li{
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+    
+    .nav-ul li a{
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+    
+    .nav-ul li a:after,
+    .nav-ul li a:before {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 0px solid transparent;
+      width: 0%;
+      height: 0%;
+      transition: all 0.5s ease;
+    }
+    
+    .nav-ul li a:after {
+      width: 0%;
+      height: 0%;
+      top: 0;
+      left: 0;
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+    }
+    
+    .nav-ul li a:before {
+      width: 0%;
+      height: 0%;
+      right: 0;
+      bottom: 0;
+      border-bottom: 2px solid transparent;
+      border-right: 2px solid transparent;
+    }
+    
+    .nav-ul li a:hover::before,
+    .nav-ul li a:hover::after {
+      width: 100%;
+      height: 100%;
+      border-color: #fff;
+    }
+    .best-col{
+        flex:1;
+        justify-content: space-between;
+    }
+    .row{
+        margin-top:5%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .text-box h1{
+        font-size: 70px;
+    }
+    .text-box p{
+        font-size: 18px;
+    }
+    .game-col{
+        flex:1;
+        justify-content: space-between;
+    }
+    h1{
+        font-size: 46px;
+    }
+    p{
+        font-size: 18px;
+    }
+    .name h3{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+
+}
+@media screen and (min-width: 1281px){
+    .row{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .nav-ul li a{
+        font-size: 22px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 1.8rem;;
+    }
+
+    .name h3{
+        font-size: 35px;
+    }
+    .text-box h1{
+        font-size: 75px;
+    }
+    .text-box p{
+        font-size: 24px;
+    }
+    
+}
